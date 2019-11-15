@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14460.32" systemVersion="17G8030" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="College" representedClassName="College" syncable="YES" codeGenerationType="class">
+        <attribute name="city" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="college" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="country" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="student" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Student" inverseName="universities" inverseEntity="Student" syncable="YES"/>
+    </entity>
+    <entity name="Student" representedClassName="Student" syncable="YES" codeGenerationType="class">
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="percentage" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="phone" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="universities" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="College" inverseName="student" inverseEntity="College" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="College" positionX="-772.96875" positionY="-202.70703125" width="128" height="120"/>
+        <element name="Student" positionX="-378" positionY="-81" width="128" height="120"/>
+    </elements>
+</model>
